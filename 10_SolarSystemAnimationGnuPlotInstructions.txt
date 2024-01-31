@@ -1,0 +1,31 @@
+# define fixed axis-ranges
+set xrange [-6e12:6e12]
+set yrange [-6e12:6e12]
+
+# filename and n=number of lines of your data 
+filedata = 'object1.dat'
+n = system(sprintf('cat %s | wc -l', filedata))
+
+do for [j=1:n] {
+    set title 'time '.j
+    plot 'object1.dat'  u 2:3 every ::1::j w l lw 2, \
+          'object1.dat' u 2:3 every ::j::j w p pt 7 ps 2, \
+           'object2.dat'  u 2:3 every ::1::j w l lw 2, \
+          'object2.dat' u 2:3 every ::j::j w p pt 7 ps 2, \
+'object3.dat'  u 2:3 every ::1::j w l lw 2, \
+          'object3.dat' u 2:3 every ::j::j w p pt 7 ps 2,\
+      'object4.dat'  u 2:3 every ::1::j w l lw 2, \
+          'object4.dat' u 2:3 every ::j::j w p pt 7 ps 2,\
+'object5.dat'  u 2:3 every ::1::j w l lw 2, \
+          'object5.dat' u 2:3 every ::j::j w p pt 7 ps 2,\
+'object6.dat'  u 2:3 every ::1::j w l lw 2, \
+          'object6.dat' u 2:3 every ::j::j w p pt 7 ps 2,\
+'object7.dat'  u 2:3 every ::1::j w l lw 2, \
+          'object7.dat' u 2:3 every ::j::j w p pt 7 ps 2,\
+'object8.dat'  u 2:3 every ::1::j w l lw 2, \
+          'object8.dat' u 2:3 every ::j::j w p pt 7 ps 2,\
+'object9.dat'  u 2:3 every ::1::j w l lw 2, \
+          'object9.dat' u 2:3 every ::j::j w p pt 7 ps 2
+
+}
+

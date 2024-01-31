@@ -31,7 +31,7 @@ Description: Applied the shooting method and Numerov's algorithm to estimate eig
 Description: Applied the Crank-Nicolson algorithm for solving the time-dependent 1D Schrödinger equation with given initial values.
 
 10_SolarSystemAnimation.cpp
-Description: Used the Velocity-Verlet method to estimate the motion of planets in the solar system.
+Description: Used the Velocity-Verlet method to estimate the motion of planets in the solar system with Halley Comet.
 
 11_PiC.cpp
 Description: C++ program for particle-in-cell simulations, focusing on electron and proton dynamics using parallel computing with OpenMP. Designed for modeling charged particle interactions in plasma physics.
